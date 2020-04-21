@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Person(firstName,lastName,dob) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob);
+    }
+    Person.prototype.getFullYear = function () {
+        return this.dob.getFullYear();
+    };
+    Person.prototype.getFullName = function () {
+        return `${this.firstName} ${this.lastName}`
+    };
+    const person1 = new Person('Paul','Mccartney','1999-7-7');
+    console.log(person1.getFullYear(),person1.getFullName());
+    console.log(person1)
+</script>
+</html>
