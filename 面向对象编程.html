@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //构造对象
+    function Person(firstName,lastName,dob) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob);
+        //给对象添加函数
+        this.getBirthYear = function () {
+            return this.dob.getFullYear()
+        };
+        this.getFullName = function () {
+            return `${this.firstName} ${this.lastName}`
+        }
+    }
+    //实例化对象;
+    const person1 = new Person('John','Lennon','4-4-2020');
+    console.log(person1.getFullName())
+    console.log(person1.getBirthYear())
+
+</script>
+</html>
