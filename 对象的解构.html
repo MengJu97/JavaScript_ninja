@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let person = {
+        firstName:'John',
+        lestName:'Lennon',
+        age:30,
+        hobbies:['movies','music','sports'],
+        address:{
+            city:'Boston',
+            state:'MA'
+        }
+    }
+    person.email = 'john@gmail.com'
+    console.log(person);
+    const {hobbies,address:{state}} = person
+    console.log(hobbies,state);
+
+</script>
+</html>
