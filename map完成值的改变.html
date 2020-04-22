@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let lessons = [
+        {
+            title:'1',
+            click:100
+        },
+        {
+            title:'2',
+            click:200
+        },
+        {
+            title:'3',
+            click:300
+        },
+        {
+            title:'4',
+            click:400
+        }
+    ];
+    lessons = lessons.map(item =>
+        item.click += 10
+    )
+    console.table(lessons)
+</script>
+</html>

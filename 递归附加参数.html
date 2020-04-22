@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let lessons = [
+        {
+            title:'1',
+            click:100
+        },
+        {
+            title:'2',
+            click:200
+        },
+        {
+            title:'3',
+            click:300
+        },
+        {
+            title:'4',
+            click:400
+        }
+    ]
+    function change(lessons,num = 10 ,i = 0) {
+        if(i === lessons.length){
+            return lessons
+        }
+            lessons[i].click += num;
+        return change(lessons,num,++i)
+    }
+    console.table(change(lessons))
+</script>
+</html>
